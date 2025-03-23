@@ -1,1 +1,22 @@
+Problem 1
+Highest Recall: Tree with depth 2
+Correctly identifies the most true positives without being overly complex.
+Lowest Precision: Tree with depth 5
+Overly complex (memorizes noise in training data), leading to more false positives (e.g., misclassifies non-Class A as Class A).
+Best F1 Score: Tree with depth 2
+F1 balances Recall and Precision. Depth 2 achieves the best trade-off.
+Micro-average: Mix all data together and calculate scores directly. Best for balanced data.
+Macro-average: Calculate scores for each class separately, then average. Best when all classes matter equally.
+Weighted-average: Weight scores by class size. Best for imbalanced data (e.g., Class A has way more samples, so focus more on its performance).
 
+Problem 2
+The first split uses the feature Uniformity of Cell Size with a threshold of 2.5. 
+The entropy, Gini impurity, and misclassification error at the parent node are approximately 0.9999, 0.4998, and 0.3492, respectively.
+The information gain from this split is 0.2113.
+
+Problem 3
+After PCA dimensionality reduction, model performance drops significantly. 
+Using only the first principal component results in lower F1 score, precision, and recall compared to the original data.
+Adding the second component improves metrics slightly but still underperforms the original features. 
+The confusion matrix for raw data shows higher true positives (TP) and lower false positives (FP), indicating that retaining full continuous features better captures discriminative patterns.
+Thus, the original continuous data is more beneficial for this model.
